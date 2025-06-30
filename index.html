@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    data = [
+        {id:1,title:"ameen",gender:"male"},
+        {id:2,title:"zainab",gender:"female"},
+        {id:3,title:"anas",gender:"male"},
+        {id:4,title:"afra",gender:"female"},
+        {id:5,title:"bilal",gender:"male"},
+        {id:6,title:"benazir",gender:"female"},
+    ];
+    
+    const mappingData = data.map((e)=>{
+        return e.title.toUpperCase();
+    });
+    
+    console.log(mappingData);
+
+    const filtering = data.filter((m)=>
+    {
+        return m.id%2 == 0;
+    });
+
+    console.log(filtering);
+
+    const genderfilter = data.filter((n)=>{
+        return n.gender == "female";
+    });
+
+    console.log(genderfilter);
+
+    const array1 = [1,2,3,4,5];
+    const array2 = [6,7,8,9,10];
+    const array3 = [11,12,13,14,15];
+
+    const arrayMerged = array1.concat(array2, array3);
+    console.log(arrayMerged);
+    console.log(arrayMerged.length);
+    console.log('********************************');
+    // find , findIndex
+
+    const findingIndex = data.findIndex((o)=>{
+        return o.id == 1;
+    });
+    console.log(findingIndex);
+
+    const findValue = data.find((p)=>{
+        return p.id == 1;
+    });
+    console.log(findValue);
+
+    // array destructuring and object destructure
+
+    dataarray = [ 'zainab', 'ameen'   ];
+
+    const [first, last] = dataarray;
+    console.log(first, last);
+    
+
+    dataobject = {
+        id:1,
+        name:'zainab',
+        coding:true,
+        entertainment:"insta"
+    };
+
+    const {name:wife , entertainment} = dataobject;
+    console.log(wife,',', entertainment);
+
+    // spread and rest
+
+</script>
+</html>
